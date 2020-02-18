@@ -7,7 +7,25 @@
 		<key>EthereumSignerDemoApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0933049E23F6702800FD55B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>093304B423F6702A00FD55B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>093304BF23F6702B00FD55B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
