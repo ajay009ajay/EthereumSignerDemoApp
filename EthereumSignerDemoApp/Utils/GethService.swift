@@ -50,7 +50,7 @@ class GethService {
                         balance = try gethClient?.getBalanceAt(GethNewContext(), account: address!, number: -1)
                 } catch let err{
                     logger.debug("Error in Getbalance: \(err.localizedDescription)")
-                    return EthereumWallet(address: accountAddress, balance:nil, note: "Synchronization not started")
+                    return EthereumWallet(address: accountAddress, balance:nil, note: "Synchronization initiating")
                 }
         
                 if let accountBalance = balance {
@@ -79,7 +79,11 @@ class GethService {
         } catch let err{
             logger.debug("Sync exception \(err.localizedDescription)")
         }
-       return SyncStatusModel(isSyncing: true, highestBlock: 0, currentBlock: 0, status: "Syncing not started")
+        /*
+           SyncProgress is throwing exception if it is not in progress that might happens if sync has been completed.
+           That's why we will hit account balance api
+         */
+       return SyncStatusModel(isSyncing: false, highestBlock: 0, currentBlock: 0, status: "Probably syncing completed")
 
     }
 }

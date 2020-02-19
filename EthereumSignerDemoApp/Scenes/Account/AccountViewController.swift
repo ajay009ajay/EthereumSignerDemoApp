@@ -109,6 +109,7 @@ extension AccountViewController: AccountViewPresenterProtocol {
 
         guard let note = ethereumWallet.note else {
             stopTimer()
+            syncLbl.text = ""
             return
         }
         syncLbl.text = note
