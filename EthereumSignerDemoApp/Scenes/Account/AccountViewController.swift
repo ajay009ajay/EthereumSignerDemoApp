@@ -7,13 +7,17 @@
 //
 
 import UIKit
- 
+import XCGLogger
+
 class AccountViewController: UIViewController {
     
     @IBOutlet weak var accountAddress: UILabel!
     @IBOutlet weak var accountBalance: UILabel!
     @IBOutlet weak var signInBtn: UIButton!
     @IBOutlet weak var validateBtn: UIButton!
+    @IBOutlet weak var syncLbl: UILabel!
+    private var timer: Timer?
+    let logger = XCGLogger.default
 
     private var accountViewPresenter = AccountViewPresenter(geth: GethService(),web3: Web3Service())
 
@@ -35,8 +39,10 @@ class AccountViewController: UIViewController {
     private func customInit() {
         self.title = RouterHelper.PageTitle.account.rawValue
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        syncLbl.numberOfLines = 0
+        syncLbl.lineBreakMode = .byWordWrapping
         if let privateKey = UserDefaultHelper.getStoredPrivateKey() {
-            accountViewPresenter.initAccountBalance(privateKey: privateKey)
+            accountViewPresenter.fetchAccountBalance(privateKey: privateKey)
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -45,12 +51,17 @@ class AccountViewController: UIViewController {
             Sometimes syncing of node block does take much time so this code will hit every time to get the updated balance if any flip happens on stack.
          */
         if let privateKey = UserDefaultHelper.getStoredPrivateKey() {
-            accountViewPresenter.initAccountBalance(privateKey: privateKey)
+            accountViewPresenter.fetchAccountBalance(privateKey: privateKey)
         }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.viewControllers = [self] // making Account VC as rootVC once successfully set private key
+        startTimer()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopTimer()
     }
     
     //MARK: IBAction
@@ -72,12 +83,42 @@ class AccountViewController: UIViewController {
     }
     */
 
+    //MARK: Timer Helper
+    func startTimer()  {
+        guard timer == nil else { return }
+        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.refreshSyncStatus), userInfo: nil, repeats: true)
+        timer?.fire()
+        logger.debug("Timer start")
+    }
+    func stopTimer() {
+        if timer != nil {
+            timer?.invalidate()
+            logger.debug("Timer stopped")
+        }
+    }
+    @objc func refreshSyncStatus() {
+        accountViewPresenter.fetchSyncStatus()
+    }
 }
 
 extension AccountViewController: AccountViewPresenterProtocol {
     func displayEthereumAccountBalance(ethereumWallet: EthereumWallet) {
+        
         accountAddress?.text = ethereumWallet.address
         accountBalance?.text = ethereumWallet.balance ?? ""
+
+        guard let note = ethereumWallet.note else {
+            stopTimer()
+            return
+        }
+        syncLbl.text = note
      }
-    
+    func displaySynsStatus(syncStatus: SyncStatusModel) {
+        let statusMessage = syncStatus.isSyncing ? "\(String(describing: syncStatus.status)) \n Highestblock: \(syncStatus.highestBlock) \n Currentblock: \(syncStatus.currentBlock)" : "Synchronization completed"
+        syncLbl.text = statusMessage
+        
+        if let privateKey = UserDefaultHelper.getStoredPrivateKey(),!syncStatus.isSyncing {
+            accountViewPresenter.fetchAccountBalance(privateKey: privateKey)
+        }
+    }
 }

@@ -11,4 +11,5 @@ import Foundation
 struct EthereumWallet {
     var address: String
     var balance: String?
+    var note: String?
 }

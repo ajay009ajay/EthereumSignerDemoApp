@@ -11,6 +11,7 @@ import Geth
 
 protocol AccountViewPresenterProtocol: class {
     func displayEthereumAccountBalance(ethereumWallet: EthereumWallet)
+    func displaySynsStatus(syncStatus: SyncStatusModel)
 }
 
 class AccountViewPresenter {
@@ -28,11 +29,18 @@ class AccountViewPresenter {
         self.accountViewDelegate = accountViewDelegate
     }
     
-    func initAccountBalance(privateKey: String) {
-        if let delegate = accountViewDelegate {             
+    func fetchAccountBalance(privateKey: String) {
+        if let delegate = accountViewDelegate {
             guard let accountAddress = web3.getAccountAddress(privateKey: privateKey) else { return }
             let wallet = geth.getBalanceAt(accountAddress: accountAddress)
             delegate.displayEthereumAccountBalance(ethereumWallet: wallet)
         }
      }
+    
+    func fetchSyncStatus()  {
+        if let delegate = accountViewDelegate {
+            let syncStatus = geth.getSynsStatus()
+            delegate.displaySynsStatus(syncStatus: syncStatus)
+        }
+    }
 }

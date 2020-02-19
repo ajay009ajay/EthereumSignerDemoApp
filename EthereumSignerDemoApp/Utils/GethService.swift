@@ -50,6 +50,7 @@ class GethService {
                         balance = try gethClient?.getBalanceAt(GethNewContext(), account: address!, number: -1)
                 } catch let err{
                     logger.debug("Error in Getbalance: \(err.localizedDescription)")
+                    return EthereumWallet(address: accountAddress, balance:nil, note: "Synchronization not started")
                 }
         
                 if let accountBalance = balance {
@@ -57,22 +58,28 @@ class GethService {
                     let valDouble = Double(intVal2)
                     let powVal = pow(10.0, 18.0)
                     let ether = (valDouble ?? 0.0)/powVal
-                    return EthereumWallet(address: accountAddress, balance: "\(ether) ETH")
+                    return EthereumWallet(address: accountAddress, balance: "\(ether) ETH", note: nil)
                 }
-            return EthereumWallet(address: accountAddress, balance:nil)
+            return EthereumWallet(address: accountAddress, balance:nil, note: "balance nil, probably syncing")
         }
     
-//    func isGethNodeSyncing()-> Bool {
-//        do {
-//            let sync = try gethClient?.syncProgress(GethNewContext())
-//
-//            print("Current block \(sync?.getCurrentBlock())")
-//            print("highest block \(sync?.getHighestBlock())")
-//            print("highest block \(sync?.getKnownStates())")
-//
-//        } catch let err{
-//            print("Sync exception \(err.localizedDescription)")
-//        }
-//        return true
-//    }
+    func getSynsStatus()-> SyncStatusModel {
+        do {
+            let sync = try gethClient?.syncProgress(GethNewContext())
+
+            logger.debug("Current block \(String(describing: sync?.getCurrentBlock()))")
+            logger.debug("highest block \(String(describing: sync?.getHighestBlock()))")
+            logger.debug("highest block \(String(describing: sync?.getKnownStates()))")
+            
+            let currentBlock: Int64 = sync?.getCurrentBlock() ?? 0
+            let highestBlock: Int64  = sync?.getHighestBlock() ?? 0
+            let syncing =  (highestBlock - currentBlock) > 0
+            let syncMessage = syncing ? "Syncing in progresss." : ""
+            return SyncStatusModel(isSyncing: syncing, highestBlock: highestBlock, currentBlock: currentBlock, status: syncMessage)
+        } catch let err{
+            logger.debug("Sync exception \(err.localizedDescription)")
+        }
+       return SyncStatusModel(isSyncing: true, highestBlock: 0, currentBlock: 0, status: "Syncing not started")
+
+    }
 }

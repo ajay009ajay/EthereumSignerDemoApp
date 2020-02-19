@@ -1,7 +1,7 @@
 platform :ios, '11.0'
 
 target 'EthereumSignerDemoApp' do
-  use_frameworks!
+  use_modular_headers!
 
   # Pods for EthereumSignerDemoApp
   pod 'Geth', '~> 1.8.6'
