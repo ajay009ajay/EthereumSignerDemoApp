@@ -126,4 +126,12 @@ class EthereumSignerDemoAppUITests: XCTestCase {
         Thread.sleep(forTimeInterval: 2.0)
 
     }
+    func testSignatureQRImageScreen() {
+        testSignScreen()
+        let label = app.images["QRImage"]
+        let exists = NSPredicate(format: "exists == 1")
+
+        expectation(for: exists, evaluatedWith: label, handler: nil)
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
 }

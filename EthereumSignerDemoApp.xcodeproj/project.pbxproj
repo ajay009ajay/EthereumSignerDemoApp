@@ -16,8 +16,6 @@
 		093304AA23F6702800FD55B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093304A823F6702800FD55B9 /* Main.storyboard */; };
 		093304AC23F6702A00FD55B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093304AB23F6702A00FD55B9 /* Assets.xcassets */; };
 		093304AF23F6702A00FD55B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093304AD23F6702A00FD55B9 /* LaunchScreen.storyboard */; };
-		093304BA23F6702B00FD55B9 /* EthereumSignerDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093304B923F6702B00FD55B9 /* EthereumSignerDemoAppTests.swift */; };
-		093304C523F6702B00FD55B9 /* EthereumSignerDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093304C423F6702B00FD55B9 /* EthereumSignerDemoAppUITests.swift */; };
 		09406A4C23FC22430050CCD5 /* SignatureViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09406A4B23FC22430050CCD5 /* SignatureViewPresenter.swift */; };
 		0943CDFC23F9809A005A5825 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0943CDFB23F9809A005A5825 /* SetupViewController.swift */; };
 		0943CDFE23F98135005A5825 /* ValidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0943CDFD23F98135005A5825 /* ValidateViewController.swift */; };
@@ -27,11 +25,15 @@
 		0943CE0E23F9C9D9005A5825 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0943CE0D23F9C9D9005A5825 /* NetworkUtils.swift */; };
 		0943CE1023F9FA40005A5825 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0943CE0F23F9FA40005A5825 /* QRCodeGenerator.swift */; };
 		094B9F5E23FD1C2F005BB596 /* SyncStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B9F5D23FD1C2F005BB596 /* SyncStatusModel.swift */; };
+		09553D1324052D9D00D5FC29 /* EthereumSignerDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093304C423F6702B00FD55B9 /* EthereumSignerDemoAppUITests.swift */; };
+		09553D1424052DAE00D5FC29 /* EthereumSignerDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093304B923F6702B00FD55B9 /* EthereumSignerDemoAppTests.swift */; };
 		0971060423FC025600E47C0C /* AccountViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971060323FC025600E47C0C /* AccountViewPresenter.swift */; };
 		09728C1223FB2DC700F50053 /* EthereumWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09728C1123FB2DC700F50053 /* EthereumWallet.swift */; };
 		09FE518023FC715700A4B28D /* GethService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE517F23FC715700A4B28D /* GethService.swift */; };
 		09FE518223FC716500A4B28D /* Web3Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE518123FC716500A4B28D /* Web3Service.swift */; };
+		52FBAA428AAE17F8730FD2A7 /* libPods-EthereumSignerDemoAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5142213374D633656306D4 /* libPods-EthereumSignerDemoAppUITests.a */; };
 		9CAC450329D8363B6D84D7DC /* libPods-EthereumSignerDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B98139997FE87976D5EF6F02 /* libPods-EthereumSignerDemoApp.a */; };
+		CDB74681212416AC84556563 /* libPods-EthereumSignerDemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C7B8E445D2EE6950CDA4A9 /* libPods-EthereumSignerDemoAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +80,22 @@
 		0943CE0D23F9C9D9005A5825 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		0943CE0F23F9FA40005A5825 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 		094B9F5D23FD1C2F005BB596 /* SyncStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusModel.swift; sourceTree = "<group>"; };
+		09553D1124052D3B00D5FC29 /* libBigInt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBigInt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09553D1524052DC300D5FC29 /* libBigInt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBigInt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09553D1724052DCE00D5FC29 /* libBigInt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBigInt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0971060323FC025600E47C0C /* AccountViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewPresenter.swift; sourceTree = "<group>"; };
 		09728C1123FB2DC700F50053 /* EthereumWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumWallet.swift; sourceTree = "<group>"; };
 		09FE517F23FC715700A4B28D /* GethService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GethService.swift; sourceTree = "<group>"; };
 		09FE518123FC716500A4B28D /* Web3Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Service.swift; sourceTree = "<group>"; };
+		2262F904DF741AD8C5C4F979 /* Pods-EthereumSignerDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoAppUITests/Pods-EthereumSignerDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45C7B8E445D2EE6950CDA4A9 /* libPods-EthereumSignerDemoAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EthereumSignerDemoAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5909DCDEE1133B22A4813E95 /* Pods-EthereumSignerDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoAppUITests/Pods-EthereumSignerDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5D7E63CF4B78A219191E718B /* Pods-EthereumSignerDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoApp.release.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoApp/Pods-EthereumSignerDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		8DD5C297A0BB491C938CFDA8 /* Pods-EthereumSignerDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoApp/Pods-EthereumSignerDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8E5142213374D633656306D4 /* libPods-EthereumSignerDemoAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EthereumSignerDemoAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD40969B842661FFC0533347 /* Pods-EthereumSignerDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoAppTests/Pods-EthereumSignerDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B98139997FE87976D5EF6F02 /* libPods-EthereumSignerDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EthereumSignerDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01D78124BD2D93AA231AD35 /* Pods-EthereumSignerDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EthereumSignerDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EthereumSignerDemoAppTests/Pods-EthereumSignerDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB74681212416AC84556563 /* libPods-EthereumSignerDemoAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FBAA428AAE17F8730FD2A7 /* libPods-EthereumSignerDemoAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +271,12 @@
 		2462AC466E9B96196641115F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09553D1724052DCE00D5FC29 /* libBigInt.a */,
+				09553D1524052DC300D5FC29 /* libBigInt.a */,
+				09553D1124052D3B00D5FC29 /* libBigInt.a */,
 				B98139997FE87976D5EF6F02 /* libPods-EthereumSignerDemoApp.a */,
+				45C7B8E445D2EE6950CDA4A9 /* libPods-EthereumSignerDemoAppTests.a */,
+				8E5142213374D633656306D4 /* libPods-EthereumSignerDemoAppUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +286,10 @@
 			children = (
 				8DD5C297A0BB491C938CFDA8 /* Pods-EthereumSignerDemoApp.debug.xcconfig */,
 				5D7E63CF4B78A219191E718B /* Pods-EthereumSignerDemoApp.release.xcconfig */,
+				E01D78124BD2D93AA231AD35 /* Pods-EthereumSignerDemoAppTests.debug.xcconfig */,
+				AD40969B842661FFC0533347 /* Pods-EthereumSignerDemoAppTests.release.xcconfig */,
+				2262F904DF741AD8C5C4F979 /* Pods-EthereumSignerDemoAppUITests.debug.xcconfig */,
+				5909DCDEE1133B22A4813E95 /* Pods-EthereumSignerDemoAppUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -298,6 +320,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 093304CC23F6702B00FD55B9 /* Build configuration list for PBXNativeTarget "EthereumSignerDemoAppTests" */;
 			buildPhases = (
+				AD082530D21B4D41063C92F8 /* [CP] Check Pods Manifest.lock */,
 				093304B123F6702A00FD55B9 /* Sources */,
 				093304B223F6702A00FD55B9 /* Frameworks */,
 				093304B323F6702A00FD55B9 /* Resources */,
@@ -316,6 +339,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 093304CF23F6702B00FD55B9 /* Build configuration list for PBXNativeTarget "EthereumSignerDemoAppUITests" */;
 			buildPhases = (
+				160A2A9ACF8994B713589B4A /* [CP] Check Pods Manifest.lock */,
 				093304BC23F6702B00FD55B9 /* Sources */,
 				093304BD23F6702B00FD55B9 /* Frameworks */,
 				093304BE23F6702B00FD55B9 /* Resources */,
@@ -401,6 +425,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		160A2A9ACF8994B713589B4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EthereumSignerDemoAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75230F67076B3F61DBCCCA38 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +462,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EthereumSignerDemoApp/Pods-EthereumSignerDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD082530D21B4D41063C92F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EthereumSignerDemoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E81FD29412EAE4AFE4F7FF9A /* [CP] Check Pods Manifest.lock */ = {
@@ -473,7 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093304BA23F6702B00FD55B9 /* EthereumSignerDemoAppTests.swift in Sources */,
+				09553D1424052DAE00D5FC29 /* EthereumSignerDemoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				093304C523F6702B00FD55B9 /* EthereumSignerDemoAppUITests.swift in Sources */,
+				09553D1324052D9D00D5FC29 /* EthereumSignerDemoAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +714,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Geth/Frameworks\"",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = EthereumSignerDemoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -669,6 +741,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Geth/Frameworks\"",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = EthereumSignerDemoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -686,6 +762,7 @@
 		};
 		093304CD23F6702B00FD55B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01D78124BD2D93AA231AD35 /* Pods-EthereumSignerDemoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,7 +770,7 @@
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EthereumSignerDemoAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +786,7 @@
 		};
 		093304CE23F6702B00FD55B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD40969B842661FFC0533347 /* Pods-EthereumSignerDemoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -716,7 +794,7 @@
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EthereumSignerDemoAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -732,11 +810,13 @@
 		};
 		093304D023F6702B00FD55B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2262F904DF741AD8C5C4F979 /* Pods-EthereumSignerDemoAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				INFOPLIST_FILE = EthereumSignerDemoAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -752,11 +832,13 @@
 		};
 		093304D123F6702B00FD55B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5909DCDEE1133B22A4813E95 /* Pods-EthereumSignerDemoAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DZFQPM8QFR;
 				INFOPLIST_FILE = EthereumSignerDemoAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
