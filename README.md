@@ -17,6 +17,14 @@ You need to setup pod.
 platform :ios, '11.0'
 
 target 'EthereumSignerDemoApp' do
+target 'EthereumSignerDemoAppTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+target 'EthereumSignerDemoAppUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
   use_modular_headers!
 
   # Pods for EthereumSignerDemoApp
